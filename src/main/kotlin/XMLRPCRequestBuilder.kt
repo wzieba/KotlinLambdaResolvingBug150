@@ -8,7 +8,7 @@ fun passingBuildGetRequest(): XMLRPCRequest {
 }
 
 fun failingBuildGetRequest(): XMLRPCRequest {
-    val lambdaListener: (Any?) -> Unit = { obj: Any? ->
+    val lambdaListener: (Any) -> Unit = { obj: Any ->
 
     }
     return XMLRPCRequest(lambdaListener)
