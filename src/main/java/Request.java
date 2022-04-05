@@ -1,9 +1,8 @@
-public class XMLRPCRequest {
+public class Request {
 
     private final Listener<? super Object[]> listener;
 
-    // The only possible values here are: Object or Object[]
-    public XMLRPCRequest(Listener<? super Object[]> listener) {
+    public Request(Listener<? super Object[]> listener) {
         this.listener = listener;
     }
 
