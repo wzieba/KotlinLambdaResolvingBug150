@@ -1,16 +1,15 @@
-class XMLRPCRequestBuilder {
+fun passingBuildGetRequest(): XMLRPCRequest {
+    val anonymousClassListener = object : Listener<Any> {
+        override fun onResponse(obj: Any) {
 
-    fun passingBuildGetRequest(): XMLRPCRequest {
-        return XMLRPCRequest(object : Listener<Any> {
-            override fun onResponse(obj: Any?) {
-
-            }
-        })
-    }
-
-    fun failingBuildGetRequest(): XMLRPCRequest {
-        return XMLRPCRequest { obj: Any? ->
-            
         }
     }
+    return XMLRPCRequest(anonymousClassListener)
+}
+
+fun failingBuildGetRequest(): XMLRPCRequest {
+    val lambdaListener: (Any?) -> Unit = { obj: Any? ->
+
+    }
+    return XMLRPCRequest(lambdaListener)
 }
