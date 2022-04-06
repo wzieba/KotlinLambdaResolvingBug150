@@ -1,9 +1,9 @@
-fun failingRequest(): Request {
+fun passingRequest(): Request {
     val samListener = Listener<Any> { }
     return Request(samListener)
 }
 
-fun passingRequest(): Request {
+fun failingRequest(): Request {
     val lambdaListener: (Any) -> Unit = { obj: Any -> }
     return Request(lambdaListener)
 }
