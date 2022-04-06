@@ -16,4 +16,18 @@ class RequestBuilderTest {
             emptyMap<String, String>()
         )
     }
+
+    @Test
+    fun kotlinTestWithPassingRequest(){
+        passingKotlinRequest().deliverResponse(
+            emptyMap<String, String>()
+        )
+    }
+
+    @Test
+    fun kotlinTestWithFailingRequest(){
+        failingKotlinRequest().deliverResponse(
+            emptyMap<String, String>()
+        )
+    }
 }
