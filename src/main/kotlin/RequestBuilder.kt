@@ -1,6 +1,6 @@
 fun failingRequest(): Request {
-    val anonymousClassListener = Listener<Any> { }
-    return Request(anonymousClassListener)
+    val samListener = Listener<Any> { }
+    return Request(samListener)
 }
 
 fun passingRequest(): Request {
