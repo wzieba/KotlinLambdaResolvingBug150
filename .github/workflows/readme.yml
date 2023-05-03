@@ -13,7 +13,7 @@ jobs:
 
     strategy:
       matrix:
-        kotlin: [ '1.4.30', '1.5.0', '1.6.20' ]
+        kotlin: [ '1.4.30', '1.5.0', '1.6.20', '1.7.20' ]
       fail-fast: false
 
     steps:
